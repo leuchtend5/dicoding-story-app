@@ -19,11 +19,11 @@ class NavBar extends LitWithoutShadowDom {
           </div>
 
           <div class="d-flex flex-row gap-3">
-            <span class="navbar-text">Hello, User</span>
             <form class="d-flex search-bar" role="search">
               <input class="form-control me-2" type="search" placeholder="Search Username" aria-label="Search">
               <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
+            <span class="navbar-text">Hello, User</span>
           </div>
 
           <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">

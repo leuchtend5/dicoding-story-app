@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Story App</title>
+  </head>
+  <body>
+    <header>
+      <nav-bar></nav-bar>
+    </header>
+
+    <main>
+      <form novalidate>
+        <div class="row mb-3 mx-0">
+          <label for="validationCustomRecordName" class="col-sm-2 col-form-label px-0">Name</label>
+          <div class="col-sm-5">
+            <input-with-validation
+              type="text"
+              inputId="validationCustomRecordName"
+              invalidFeedbackMessage="Wajib diisi"
+              required
+            ></input-with-validation>
+          </div>
+        </div>
+        <div class="row mb-3 mx-0">
+          <label for="validationCustomNotes" class="col-sm-2 col-form-label px-0"
+            >Description</label
+          >
+          <div class="col-sm-5">
+            <textarea-with-validation
+              inputId="validationCustomNotes"
+              invalidFeedbackMessage="Wajib diisi"
+              required
+            ></textarea-with-validation>
+          </div>
+        </div>
+        <div class="row mb-3 mx-0">
+          <label for="validationCustomDate" class="col-sm-2 col-form-label px-0">Date</label>
+          <div class="col-sm-3">
+            <input-group-with-validation
+              type="datetime-local"
+              inputId="validationCustomDate"
+              invalidFeedbackMessage="Wajib diisi"
+              validation
+              required
+            ></input-group-with-validation>
+          </div>
+        </div>
+        <div class="row mb-3 mx-0">
+          <label for="validationCustomEvidence" class="col-sm-2 col-form-label px-0"
+            >Add Image</label
+          >
+          <div class="col-sm-3">
+            <input-image-with-preview
+              inputId="validationCustomEvidence"
+              invalidFeedbackMessage="Wajib diisi"
+              required
+            ></input-image-with-preview>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </main>
+
+    <footer>
+      <footer-app></footer-app>
+    </footer>
+  </body>
+</html>

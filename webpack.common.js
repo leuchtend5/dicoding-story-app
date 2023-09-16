@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -44,14 +44,25 @@ module.exports = {
       template: path.resolve(__dirname, 'src/views/index.html'),
     }),
 
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, 'src/public/'),
-    //       to: path.resolve(__dirname, 'dist/'),
-    //     },
-    //   ],
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'pages/add.html',
+      template: path.resolve(__dirname, 'src/views/pages/add.html'),
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'pages/about.html',
+      template: path.resolve(__dirname, 'src/views/pages/about.html'),
+    }),
+
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/public/'),
+          to: path.resolve(__dirname, 'dist/'),
+        },
+      ],
+    }),
+
     new CleanWebpackPlugin(),
   ],
 };

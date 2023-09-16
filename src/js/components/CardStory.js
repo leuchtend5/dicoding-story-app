@@ -1,6 +1,22 @@
 import { LitElement, html, css } from 'lit';
 
 class CardStory extends LitElement {
+  static properties = {
+    name: { type: String },
+    createdAt: { type: String },
+  };
+
+  constructor() {
+    super();
+    this.name = '';
+    this.createdAt = '';
+  }
+
+  set story(story) {
+    this.name = story.name || '';
+    this.createdAt = story.createdAt || '';
+  }
+
   static styles = css`
     .card-container {
       background-color: #e2e2e2;
@@ -39,8 +55,8 @@ class CardStory extends LitElement {
     return html`
       <div class="card-container">
         <div>
-          <div class="name">Faisal Sulaiman</div>
-          <div class="created-date">2022-01-08T06:34:18.598Z</div>
+          <div class="name">${this.name}</div>
+          <div class="created-date">${this.createdAt}</div>
         </div>
 
         <img src="https://source.unsplash.com/1200x700/?nature" alt="" />
