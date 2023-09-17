@@ -16,6 +16,8 @@ class CardStory extends LitElement {
 
   set story(story) {
     this.name = story.name || '';
+    this.src = story.photoUrl || '';
+    this.description = story.description || '';
     this.createdAt = this._formattedDate(story.createdAt) || '';
   }
 
@@ -32,9 +34,7 @@ class CardStory extends LitElement {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 250px;
-      height: 400px;
-      border-radius: 10px;
+      border-radius: 8px;
       gap: 20px;
       padding: 12px 12px;
       box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.05);
@@ -68,11 +68,8 @@ class CardStory extends LitElement {
           <div class="created-date">${this.createdAt}</div>
         </div>
 
-        <img src="https://source.unsplash.com/1200x700/?nature" alt="" />
-        <div class="description">
-          In a pretium sem. Suspendisse eget sollicitudin enim, sed suscipit mi. Integer sagittis
-          lorem urna, tincidunt viverra lectus gravida id. Praesent venenatis nibh ac nisi.
-        </div>
+        <img src="${this.src}" alt="Image" />
+        <div class="description">${this.description}</div>
       </div>
     `;
   }

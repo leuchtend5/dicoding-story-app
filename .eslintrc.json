@@ -16,6 +16,10 @@
     "class-methods-use-this": "off",
     "no-underscore-dangle": "off",
     "no-return-assign": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "quotes": "off",
+    "indent": "off",
+    "object-curly-newline": "off",
+    "arrow-body-style": "off"
   }
 }

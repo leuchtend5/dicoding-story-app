@@ -13,7 +13,12 @@ class FooterApp extends LitElement {
   `;
 
   render() {
-    return html` <div class="footer-text">Copyright © ${new Date().getFullYear()} Leuchtend</div> `;
+    return html`
+      <div class="footer-text">
+        Copyright © ${new Date().getFullYear()} Leuchtend
+        <locale-picker></locale-picker>
+      </div>
+    `;
   }
 }
 

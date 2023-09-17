@@ -1,6 +1,10 @@
 // Custom modules
 @use '../vendors-extensions/bootstrap/components/offcanvas' as offcanvas;
-@use '../vendors-extensions/bootstrap/variables/container' as test;
+@use '../vendors-extensions/bootstrap/components/container' as container;
+@use '../vendors-extensions/bootstrap/components/navbar' as navbar;
+@use '../vendors-extensions/bootstrap/components/nav' as customNav;
+@use '../vendors-extensions/bootstrap/components/buttons' as button;
+@use '../vendors-extensions/bootstrap/components/close' as customClose;
 
 // ==================================================
 // Bootstrap
@@ -16,10 +20,12 @@
 @import '~bootstrap/scss/variables';
 
 // Menerapkan/override variables Bootstrap apa pun di sini
-$container-padding-x: test.$container-padding-x;
-
-// offcanvas
+$container-padding-x: container.$container-padding-x;
 $offcanvas-bg-color: offcanvas.$offcanvas-bg-color;
+$navbar-toggler-focus-width: navbar.$navbar-toggler-focus-width;
+$btn-padding-x: button.$btn-padding-x;
+$btn-padding-y: button.$btn-padding-y;
+$btn-close-opacity: customClose.$btn-close-opacity;
 
 //
 // Konfigurasi Bootstrap
@@ -58,3 +64,10 @@ $offcanvas-bg-color: offcanvas.$offcanvas-bg-color;
 //
 // Tambahkan custom code di sini
 //
+.nav-link {
+  color: customNav.$nav-link-color;
+
+  &:hover {
+    color: customNav.$nav-link-hover-color;
+  }
+}

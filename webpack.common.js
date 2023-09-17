@@ -36,6 +36,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpg|png)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [

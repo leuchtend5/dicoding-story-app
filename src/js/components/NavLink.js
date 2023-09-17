@@ -21,7 +21,7 @@ class NavLink extends LitWithoutShadowDom {
   render() {
     return html`
       <li class="nav-item">
-        <a class="nav-link text-dark" href="${this.to}">${this.content}</a>
+        <a class="nav-link" href="${this.to}">${this.content}</a>
       </li>
     `;
   }

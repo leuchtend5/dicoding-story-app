@@ -3,7 +3,6 @@ import '../components/CardStory';
 const Dashboard = {
   async init() {
     await this._initialData();
-    // this._initialListener();
   },
 
   async _initialData() {

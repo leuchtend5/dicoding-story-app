@@ -12,8 +12,8 @@
     </header>
 
     <main>
-      <form id="addStoryForm" novalidate>
-        <div class="row mb-3 mx-0">
+      <form id="addStoryForm" class="mx-3 mt-3" novalidate>
+        <div class="row mb-5 mx-0">
           <label for="validationCustomRecordName" class="col-sm-2 col-form-label px-0">Name</label>
           <div class="col-sm-5">
             <input-with-validation
@@ -24,7 +24,7 @@
             ></input-with-validation>
           </div>
         </div>
-        <div class="row mb-3 mx-0">
+        <div class="row mb-5 mx-0">
           <label for="validationCustomNotes" class="col-sm-2 col-form-label px-0"
             >Description</label
           >
@@ -36,9 +36,9 @@
             ></textarea-with-validation>
           </div>
         </div>
-        <div class="row mb-3 mx-0">
+        <div class="row mb-5 mx-0">
           <label for="validationCustomDate" class="col-sm-2 col-form-label px-0">Date</label>
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <input-group-with-validation
               type="datetime-local"
               inputId="validationCustomDate"
@@ -48,11 +48,11 @@
             ></input-group-with-validation>
           </div>
         </div>
-        <div class="row mb-3 mx-0">
+        <div class="row mb-5 mx-0">
           <label for="validationCustomEvidence" class="col-sm-2 col-form-label px-0"
             >Add Image</label
           >
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <input-image-with-preview
               inputId="validationCustomEvidence"
               invalidFeedbackMessage="Wajib diisi"
