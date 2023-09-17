@@ -9,8 +9,11 @@ const Dashboard = {
   async _initialData() {
     const fetchData = await fetch('/data/DATA.json');
     const response = await fetchData.json();
+    const storyArray = response.listStory;
 
-    this._populateDataToCard(response.listStory[0]);
+    storyArray.forEach(async (story) => {
+      this._populateDataToCard(story);
+    });
   },
 
   _populateDataToCard(data) {

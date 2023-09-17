@@ -15,6 +15,7 @@
     "global-require": "off",
     "class-methods-use-this": "off",
     "no-underscore-dangle": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "no-console": "off"
   }
 }

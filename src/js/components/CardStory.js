@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { format } from 'date-fns';
 
 class CardStory extends LitElement {
   static properties = {
@@ -8,13 +9,21 @@ class CardStory extends LitElement {
 
   constructor() {
     super();
+
     this.name = '';
     this.createdAt = '';
   }
 
   set story(story) {
     this.name = story.name || '';
-    this.createdAt = story.createdAt || '';
+    this.createdAt = this._formattedDate(story.createdAt) || '';
+  }
+
+  _formattedDate(value) {
+    const date = new Date(value);
+
+    const newDateFormat = format(date, 'MMMM d, yyyy, h:mm a');
+    return newDateFormat;
   }
 
   static styles = css`
